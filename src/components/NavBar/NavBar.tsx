@@ -2,13 +2,27 @@ import { NavLink } from "react-router-dom";
 import s from "./NavBar.module.css";
 import clsx from "clsx";
 import { ROUTES as R } from "../../share/routes";
+import { useCount } from "../../hooks/useCount";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   clsx(s.link, isActive && s.active);
 
 export default function NavBar() {
+  const {count, increment, decrement, clear}=useCount();
   return (
     <nav className={s.container}>
+      <span>
+        <div>{count}</div>
+        <button type="button" onClick={()=>increment(1)}>
+        +1
+      </button>
+      <button type="button" onClick={()=>decrement(1)}>
+        -1
+      </button>
+      <button type="button" onClick={clear}>
+        clear
+      </button>
+      </span>
       <NavLink to={R.HOME} className={navLinkClass}>Home</NavLink>
         <NavLink to={R.PRODUCTS} className={navLinkClass}>Products</NavLink>
         <NavLink to={R.CREATE_CATEGORY} className={navLinkClass}>Create Category</NavLink>

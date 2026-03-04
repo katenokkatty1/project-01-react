@@ -37,6 +37,7 @@ export default function AppRoutes() {
         {/* или  <Route index element={<Home />} /> - index означает домашнюю страничку*/}
         <Route path="/gender-reveal" element={<GenderReveal />} />
         <Route path="/counter" element={<Counter />} />
+        
         <Route
           path="/ideal-weight-calculator"
           element={<IdealWeightCalculator />}
@@ -55,6 +56,8 @@ export default function AppRoutes() {
             />
           }
         />
+
+        
         <Route path={R.ABOUT} element={<About />} />
         <Route path={R.PROFILE} element={<ProfileLayout />}>
           <Route path={R.PROFILE} element={<Profile />} />
