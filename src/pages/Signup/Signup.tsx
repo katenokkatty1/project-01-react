@@ -38,6 +38,7 @@ const Signup = () => {
           fetchRegister(values);
           //   alert(JSON.stringify(values, null, 2));
           actions.setSubmitting(false);
+          actions.resetForm();
         }}
       >
         <Form>

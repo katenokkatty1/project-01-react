@@ -23,6 +23,9 @@ import ProductList from "../components/ProductList/ProductList";
 import UserPage from "../pages/UserPage/UserPage";
 import Signup from "../pages/Signup/Signup";
 import Signin from "../pages/Signin/Signin";
+import CreateCategory from "../pages/CreateCategory/CreateCategory";
+import Parent from "../components/Family/Parent";
+
 
 export default function AppRoutes() {
   return (
@@ -62,12 +65,14 @@ export default function AppRoutes() {
         <Route path={R.NOT_FOUND} element={<NotFound />} />
         <Route path={R.PRODUCTS} element={<ProductList />} />
 
-        <Route path={R.PRODUCT(":id")} element={<ProductPage />}></Route>
-        <Route path={R.USER(":id")} element={<UserPage />}></Route>
-        <Route path={R.CAR(":model")} element={<CarPage />}></Route>
-        <Route path={R.USERS} element={<UsersPage />}></Route>
+        <Route path={R.PRODUCT(":id")} element={<ProductPage />} />
+        <Route path={R.USER(":id")} element={<UserPage />} />
+        <Route path={R.CAR(":model")} element={<CarPage />} />
+        <Route path={R.USERS} element={<UsersPage />} />
         <Route path={R.SIGNUP} element={<Signup />}></Route>
         <Route path={R.SIGNIN} element={<Signin />}></Route>
+        <Route path={R.CREATE_CATEGORY} element={<CreateCategory />}></Route>
+        <Route path={"/parent"} element={<Parent />}></Route>
 
       </Route>
     </Routes>

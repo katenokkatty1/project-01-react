@@ -20,6 +20,6 @@ PROFILE: "/profile",
   USER: (id: string | number) => `/users/${id}`,
 SIGNUP: "/signup",
 SIGNIN: "/signin",
-
+CREATE_CATEGORY: "/categories/add",
 
 } as const;

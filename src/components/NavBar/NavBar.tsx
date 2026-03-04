@@ -11,6 +11,7 @@ export default function NavBar() {
     <nav className={s.container}>
       <NavLink to={R.HOME} className={navLinkClass}>Home</NavLink>
         <NavLink to={R.PRODUCTS} className={navLinkClass}>Products</NavLink>
+        <NavLink to={R.CREATE_CATEGORY} className={navLinkClass}>Create Category</NavLink>
         <NavLink to={R.USERS} className={navLinkClass}>Users</NavLink>
       <NavLink to={R.COUNTER} className={navLinkClass}>Counter</NavLink>
       <NavLink to={R.GENDER_REVEAL} className={navLinkClass}>Gender Reveal</NavLink>
